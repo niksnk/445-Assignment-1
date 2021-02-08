@@ -6,7 +6,7 @@ public class DestroyObject : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == "Cube")
+        if(collision.gameObject.name == "DestroyObj1" || collision.gameObject.name == "Cube")
         {
             Destroy(collision.gameObject);
         }
