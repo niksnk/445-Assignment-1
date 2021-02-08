@@ -17,13 +17,20 @@ public class PushMechanic : MonoBehaviour
         //if the object is below character, dont push as well
         if (hit.moveDirection.y < -0.3) return;
 
-        if (body.gameObject.name == "Cube" || (body.gameObject.name == "DestroyObj1")) return;
+        if (body.gameObject.name == "Cube" || body.gameObject.name == "DestroyObj1" || body.gameObject.name == "Trigger") return;
 
         //pushing objects to sides, not up and down
 
         Vector3 push = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
 
         //multiply character movement speed with the push strength of the character instantiated above
-        body.velocity = push * strength;
+        if (body.gameObject.name == "Door")
+        {
+            body.velocity = push * strength / 5;
+        }
+        else {
+            body.velocity = push * strength;
+        }
+        
     }
 }
