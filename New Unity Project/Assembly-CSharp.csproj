@@ -64,6 +64,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
+    <Compile Include="Assets\Scripts\DestroyObject.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
